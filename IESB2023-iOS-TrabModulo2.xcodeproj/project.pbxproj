@@ -3,10 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720663322B16B97400F5CF6C /* RetornoDaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663262B16B97300F5CF6C /* RetornoDaApi.swift */; };
+		720663332B16B97400F5CF6C /* Telefones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663272B16B97300F5CF6C /* Telefones.swift */; };
+		720663342B16B97400F5CF6C /* BlocoParlamentar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663282B16B97300F5CF6C /* BlocoParlamentar.swift */; };
+		720663352B16B97400F5CF6C /* Senador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663292B16B97300F5CF6C /* Senador.swift */; };
+		720663362B16B97400F5CF6C /* Suplentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206632A2B16B97300F5CF6C /* Suplentes.swift */; };
+		720663372B16B97400F5CF6C /* DescrMandato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206632B2B16B97300F5CF6C /* DescrMandato.swift */; };
+		720663382B16B97400F5CF6C /* ModelErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206632C2B16B97300F5CF6C /* ModelErrors.swift */; };
+		720663392B16B97400F5CF6C /* TipoMetadados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206632D2B16B97300F5CF6C /* TipoMetadados.swift */; };
+		7206633A2B16B97400F5CF6C /* TipoParlamentares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206632E2B16B97300F5CF6C /* TipoParlamentares.swift */; };
+		7206633B2B16B97400F5CF6C /* Legislatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206632F2B16B97300F5CF6C /* Legislatura.swift */; };
+		7206633C2B16B97400F5CF6C /* Exercicios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663302B16B97400F5CF6C /* Exercicios.swift */; };
+		7206633D2B16B97400F5CF6C /* IdentSenador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663312B16B97400F5CF6C /* IdentSenador.swift */; };
+		720663402B16B98300F5CF6C /* SenadorListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206633F2B16B98300F5CF6C /* SenadorListService.swift */; };
+		720663432B16B98F00F5CF6C /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663422B16B98F00F5CF6C /* ImageManager.swift */; };
+		720663472B16BA8100F5CF6C /* SenadorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663462B16BA8100F5CF6C /* SenadorListView.swift */; };
+		720663492B16BA9200F5CF6C /* SenadorListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663482B16BA9200F5CF6C /* SenadorListItemView.swift */; };
+		7206634B2B16DE4100F5CF6C /* SenadorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */; };
 		72148D9F2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148D9E2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift */; };
 		72148DA12B168B92009F2F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DA02B168B92009F2F23 /* ContentView.swift */; };
 		72148DA32B168B94009F2F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72148DA22B168B94009F2F23 /* Assets.xcassets */; };
@@ -16,6 +33,10 @@
 		72148DB52B168B94009F2F23 /* IESB2023_iOS_TrabModulo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DB42B168B94009F2F23 /* IESB2023_iOS_TrabModulo2Tests.swift */; };
 		72148DBF2B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DBE2B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITests.swift */; };
 		72148DC12B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DC02B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift */; };
+		723CF5E02B1693AB00F872CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 723CF5DF2B1693AB00F872CD /* README.md */; };
+		723CF5E22B1693C700F872CD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 723CF5E12B1693C600F872CD /* LICENSE */; };
+		72A2A62E2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2A62D2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift */; };
+		72A2A6302B17149400C443F2 /* SenadorListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +57,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		720663262B16B97300F5CF6C /* RetornoDaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetornoDaApi.swift; sourceTree = "<group>"; };
+		720663272B16B97300F5CF6C /* Telefones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Telefones.swift; sourceTree = "<group>"; };
+		720663282B16B97300F5CF6C /* BlocoParlamentar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlocoParlamentar.swift; sourceTree = "<group>"; };
+		720663292B16B97300F5CF6C /* Senador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Senador.swift; sourceTree = "<group>"; };
+		7206632A2B16B97300F5CF6C /* Suplentes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suplentes.swift; sourceTree = "<group>"; };
+		7206632B2B16B97300F5CF6C /* DescrMandato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescrMandato.swift; sourceTree = "<group>"; };
+		7206632C2B16B97300F5CF6C /* ModelErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelErrors.swift; sourceTree = "<group>"; };
+		7206632D2B16B97300F5CF6C /* TipoMetadados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMetadados.swift; sourceTree = "<group>"; };
+		7206632E2B16B97300F5CF6C /* TipoParlamentares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoParlamentares.swift; sourceTree = "<group>"; };
+		7206632F2B16B97300F5CF6C /* Legislatura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legislatura.swift; sourceTree = "<group>"; };
+		720663302B16B97400F5CF6C /* Exercicios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercicios.swift; sourceTree = "<group>"; };
+		720663312B16B97400F5CF6C /* IdentSenador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentSenador.swift; sourceTree = "<group>"; };
+		7206633F2B16B98300F5CF6C /* SenadorListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenadorListService.swift; sourceTree = "<group>"; };
+		720663422B16B98F00F5CF6C /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		720663462B16BA8100F5CF6C /* SenadorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListView.swift; sourceTree = "<group>"; };
+		720663482B16BA9200F5CF6C /* SenadorListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListItemView.swift; sourceTree = "<group>"; };
+		7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListViewModel.swift; sourceTree = "<group>"; };
 		72148D9B2B168B92009F2F23 /* IESB2023-iOS-TrabModulo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IESB2023-iOS-TrabModulo2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72148D9E2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IESB2023_iOS_TrabModulo2App.swift; sourceTree = "<group>"; };
 		72148DA02B168B92009F2F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +86,10 @@
 		72148DBA2B168B94009F2F23 /* IESB2023-iOS-TrabModulo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IESB2023-iOS-TrabModulo2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72148DBE2B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IESB2023_iOS_TrabModulo2UITests.swift; sourceTree = "<group>"; };
 		72148DC02B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		723CF5DF2B1693AB00F872CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		723CF5E12B1693C600F872CD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		72A2A62D2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListViewNavigationSplitView.swift; sourceTree = "<group>"; };
+		72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +117,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		720663252B16B97300F5CF6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				720663262B16B97300F5CF6C /* RetornoDaApi.swift */,
+				720663272B16B97300F5CF6C /* Telefones.swift */,
+				720663282B16B97300F5CF6C /* BlocoParlamentar.swift */,
+				720663292B16B97300F5CF6C /* Senador.swift */,
+				7206632A2B16B97300F5CF6C /* Suplentes.swift */,
+				7206632B2B16B97300F5CF6C /* DescrMandato.swift */,
+				7206632C2B16B97300F5CF6C /* ModelErrors.swift */,
+				7206632D2B16B97300F5CF6C /* TipoMetadados.swift */,
+				7206632E2B16B97300F5CF6C /* TipoParlamentares.swift */,
+				7206632F2B16B97300F5CF6C /* Legislatura.swift */,
+				720663302B16B97400F5CF6C /* Exercicios.swift */,
+				720663312B16B97400F5CF6C /* IdentSenador.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7206633E2B16B98300F5CF6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7206633F2B16B98300F5CF6C /* SenadorListService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		720663412B16B98F00F5CF6C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				720663422B16B98F00F5CF6C /* ImageManager.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		720663452B16B9E200F5CF6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72148DA02B168B92009F2F23 /* ContentView.swift */,
+				720663462B16BA8100F5CF6C /* SenadorListView.swift */,
+				720663482B16BA9200F5CF6C /* SenadorListItemView.swift */,
+				7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */,
+				72A2A62D2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift */,
+				72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		72148D922B168B92009F2F23 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +189,12 @@
 			isa = PBXGroup;
 			children = (
 				72148D9E2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift */,
-				72148DA02B168B92009F2F23 /* ContentView.swift */,
+				720663452B16B9E200F5CF6C /* Views */,
+				723CF5E12B1693C600F872CD /* LICENSE */,
+				723CF5DF2B1693AB00F872CD /* README.md */,
+				720663412B16B98F00F5CF6C /* Utility */,
+				7206633E2B16B98300F5CF6C /* Services */,
+				720663252B16B97300F5CF6C /* Models */,
 				72148DA22B168B94009F2F23 /* Assets.xcassets */,
 				72148DA72B168B94009F2F23 /* Persistence.swift */,
 				72148DA92B168B94009F2F23 /* IESB2023_iOS_TrabModulo2.xcdatamodeld */,
@@ -213,7 +308,7 @@
 				};
 			};
 			buildConfigurationList = 72148D962B168B92009F2F23 /* Build configuration list for PBXProject "IESB2023-iOS-TrabModulo2" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -237,7 +332,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723CF5E02B1693AB00F872CD /* README.md in Resources */,
 				72148DA62B168B94009F2F23 /* Preview Assets.xcassets in Resources */,
+				723CF5E22B1693C700F872CD /* LICENSE in Resources */,
 				72148DA32B168B94009F2F23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +360,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720663372B16B97400F5CF6C /* DescrMandato.swift in Sources */,
+				7206634B2B16DE4100F5CF6C /* SenadorListViewModel.swift in Sources */,
 				72148DA82B168B94009F2F23 /* Persistence.swift in Sources */,
 				72148DA12B168B92009F2F23 /* ContentView.swift in Sources */,
+				720663432B16B98F00F5CF6C /* ImageManager.swift in Sources */,
+				720663342B16B97400F5CF6C /* BlocoParlamentar.swift in Sources */,
+				720663392B16B97400F5CF6C /* TipoMetadados.swift in Sources */,
+				720663492B16BA9200F5CF6C /* SenadorListItemView.swift in Sources */,
+				7206633A2B16B97400F5CF6C /* TipoParlamentares.swift in Sources */,
+				720663322B16B97400F5CF6C /* RetornoDaApi.swift in Sources */,
+				720663472B16BA8100F5CF6C /* SenadorListView.swift in Sources */,
+				72A2A62E2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift in Sources */,
+				720663352B16B97400F5CF6C /* Senador.swift in Sources */,
+				72A2A6302B17149400C443F2 /* SenadorListDetailView.swift in Sources */,
+				7206633C2B16B97400F5CF6C /* Exercicios.swift in Sources */,
 				72148D9F2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift in Sources */,
+				720663382B16B97400F5CF6C /* ModelErrors.swift in Sources */,
+				720663402B16B98300F5CF6C /* SenadorListService.swift in Sources */,
 				72148DAB2B168B94009F2F23 /* IESB2023_iOS_TrabModulo2.xcdatamodeld in Sources */,
+				720663332B16B97400F5CF6C /* Telefones.swift in Sources */,
+				7206633D2B16B97400F5CF6C /* IdentSenador.swift in Sources */,
+				720663362B16B97400F5CF6C /* Suplentes.swift in Sources */,
+				7206633B2B16B97400F5CF6C /* Legislatura.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct IESB2023_iOS_TrabModulo2App: App {
+//    @StateObject
+//    var senadorListViewModel: SenadorListViewModel = .init()
+
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SenadorListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
