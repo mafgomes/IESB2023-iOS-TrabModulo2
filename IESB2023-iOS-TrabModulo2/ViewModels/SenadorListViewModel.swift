@@ -48,6 +48,7 @@ class SenadorListViewModel: ObservableObject {
                             imageURL: $0.IdentificacaoParlamentar.UrlFotoParlamentar,
                             eMail: $0.IdentificacaoParlamentar.EmailParlamentar,
                             telefone: $0.IdentificacaoParlamentar.Telefones.Telefones.first!.NumeroTelefone,
+                            telURL: $0.telURL,
                             escritorio: $0.IdentificacaoParlamentar.UfParlamentar
                         )
                     }

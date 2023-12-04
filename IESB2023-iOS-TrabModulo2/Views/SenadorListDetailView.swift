@@ -14,7 +14,8 @@ struct SenadorListDetailView: View {
     @State private var st = false
     @State private var favStr: String?
     @State private var favIcon: String?
-    @State var isSheetPresented = false
+    @State private var isSheetPresented = false
+
     private var fav = Favoritado.shared
 
     init(itemModel: SenadorListItemModel) {
@@ -22,7 +23,7 @@ struct SenadorListDetailView: View {
         updateState()
     }
 
-    func formatTel(tel: String) -> String {
+    func formatTelForDisplay(tel: String) -> String {
         let posHifen = 4
         return "\(tel.prefix(tel.count - posHifen))-\(tel.suffix(posHifen))"
     }
@@ -78,7 +79,7 @@ struct SenadorListDetailView: View {
                         Text(im.nome)
                             .font(.largeTitle)
 
-                        Text(" Nome Completo: \(im.nomeCompleto) ")
+                        Text(" \(im.nomeCompleto) ")
 
                         HStack {
                             Text("Legenda:")
@@ -89,7 +90,10 @@ struct SenadorListDetailView: View {
                         Text("").padding(5)
                         Label("[\(im.eMail)](mailto:\(im.eMail))", systemImage: "envelope")
                         Text("").padding(5)
-                        Label("[\(formatTel(tel: im.telefone))](tel://+5561\(im.telefone))", systemImage: "phone")
+                        if( print("telURL: '[\(formatTelForDisplay(tel: im.telefone))](\(im.telURL))'") != nil ) {
+                            Text("")
+                        }
+                        Label("[\(formatTelForDisplay(tel: im.telefone))](\(im.telURL))", systemImage: "phone")
                         Text("").padding(5)
                     }
                     .foregroundColor(.black)
@@ -124,6 +128,7 @@ struct SenadorListDetailView_Previews: PreviewProvider {
                 ),
                 eMail: "fulano@senado.leg.br",
                 telefone: "(66) 2666-6666",
+                telURL: "tel://+556626666666",
                 escritorio: "AC"
             )
         )

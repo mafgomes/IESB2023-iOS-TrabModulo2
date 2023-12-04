@@ -16,6 +16,7 @@ struct SenadorListItemModel: Identifiable, Hashable {
     let imageURL: URL?
     let eMail: String
     let telefone: String
+    let telURL: String
     let escritorio: String
 }
 
@@ -27,6 +28,7 @@ struct SenadorListItemView: View {
     private let imageURL: URL?
     private let eMail: String
     private let telefone: String
+    private let telURL: String
     private let escritorio: String
     private var cinza: ParOuImpar
 
@@ -41,6 +43,7 @@ struct SenadorListItemView: View {
         self.imageURL = model.imageURL
         self.eMail = model.eMail
         self.telefone = model.telefone
+        self.telURL = model.telURL
         self.escritorio = model.escritorio
 
         self.cinza = cinza
