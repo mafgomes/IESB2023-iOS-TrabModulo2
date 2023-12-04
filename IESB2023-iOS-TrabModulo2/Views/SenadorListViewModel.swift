@@ -35,6 +35,7 @@ class SenadorListViewModel: ObservableObject {
                     .fetchSenadorList()
                     .map {
                         SenadorListItemModel(
+                            cod: $0.IdentificacaoParlamentar.CodigoParlamentar,
                             nome: $0.IdentificacaoParlamentar.NomeParlamentar,
                             nomeCompleto: $0.IdentificacaoParlamentar.NomeCompletoParlamentar,
                             partido: "\($0.IdentificacaoParlamentar.SiglaPartidoParlamentar) / \($0.Mandato.UfParlamentar)",

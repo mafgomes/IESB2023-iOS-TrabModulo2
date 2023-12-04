@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct SenadorListDetailView: View {
-    private let itemModel: SenadorListItemModel
+    private let im: SenadorListItemModel
 
+    @State private var st = false
+    @State private var favStr: String?
+    @State private var favIcon: String?
     @State var isSheetPresented = false
+    private var fav = Favoritado.shared
 
     init(itemModel: SenadorListItemModel) {
-        self.itemModel = itemModel
+        self.im = itemModel
+        updateState()
     }
 
     func formatTel(tel: String) -> String {
@@ -21,11 +26,13 @@ struct SenadorListDetailView: View {
         return "\(tel.prefix(tel.count - posHifen))-\(tel.suffix(posHifen))"
     }
 
-    var body: some View {
-        let favorito: Bool = false
-        var favIcon: String = favorito ? "star.fill" : "star"
-        var favStr: String = favorito ? "Favorito" : "Favoritar"
+    func updateState() {
+        st = fav.estado(cod: im.cod)
+        favStr = st ? " Favorito " : " Favoritar "
+        favIcon = st ? "star.fill" : "star"
+    }
 
+    var body: some View {
         ZStack {
             Image("background")
                 .resizable()
@@ -33,11 +40,18 @@ struct SenadorListDetailView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-//                Button(favStr, image: Label("", systemImage: favIcon), action: {
-//                    isSheetPresented.toggle()
-//                })
+                Label(favStr ?? " - ", systemImage: favIcon ?? "homekit")
+                    .background(.white)
+                    .padding(5)
+                    .onAppear {
+                        updateState()
+                    }
+                    .onTapGesture {
+                        fav.toggle(cod: im.cod)
+                        updateState()
+                    }
 
-                AsyncImage(url: itemModel.imageURL) { phase in
+                AsyncImage(url: im.imageURL) { phase in
                     switch phase {
                     case .empty:
                         ProgressView()
@@ -59,21 +73,21 @@ struct SenadorListDetailView: View {
 
                 ZStack {
                     VStack {
-                        Text(itemModel.nome)
+                        Text(im.nome)
                             .font(.largeTitle)
 
-                        Text(" Nome Completo: \(itemModel.nomeCompleto) ")
+                        Text(" Nome Completo: \(im.nomeCompleto) ")
 
                         HStack {
                             Text("Legenda:")
-                            Text(itemModel.partido)
+                            Text(im.partido)
                                 .font(.headline)
                         }
                         
                         Text("").padding(5)
-                        Label("[\(itemModel.eMail)](mailto:\(itemModel.eMail))", systemImage: "envelope")
+                        Label("[\(im.eMail)](mailto:\(im.eMail))", systemImage: "envelope")
                         Text("").padding(5)
-                        Label("[\(formatTel(tel: itemModel.telefone))](tel://+5561\(itemModel.telefone))", systemImage: "phone")
+                        Label("[\(formatTel(tel: im.telefone))](tel://+5561\(im.telefone))", systemImage: "phone")
                         Text("").padding(5)
                     }
                     .foregroundColor(.black)
@@ -98,6 +112,7 @@ struct SenadorListDetailView_Previews: PreviewProvider {
     static var previews: some View {
         SenadorListDetailView(
             itemModel: .init(
+                cod: "12345",
                 nome: "Justo Veríssimo",
                 nomeCompleto: "Justo Justíssimo Veríssimo",
                 partido: "PQP / AC",

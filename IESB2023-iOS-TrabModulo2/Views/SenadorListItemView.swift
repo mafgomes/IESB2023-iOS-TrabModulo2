@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SenadorListItemModel: Identifiable, Hashable {
     let id = UUID()
+    let cod: String
     let nome: String
     let nomeCompleto: String
     let partido: String
@@ -19,6 +20,7 @@ struct SenadorListItemModel: Identifiable, Hashable {
 }
 
 struct SenadorListItemView: View {
+    private let cod: String
     private let nome: String
     private let nomeCompleto: String
     private let partido: String
@@ -32,6 +34,7 @@ struct SenadorListItemView: View {
         model: SenadorListItemModel,
         cinza: ParOuImpar
     ) {
+        self.cod = model.cod
         self.nome = model.nome
         self.nomeCompleto = model.nomeCompleto
         self.partido = model.partido
