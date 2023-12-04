@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import SwiftData
 
-@MainActor
+//@MainActor
 //struct SenadorListView: View {
 //    @StateObject var listViewModel: SenadorListViewModel = .init(
 //        service: SenadorListService()
@@ -19,6 +20,7 @@ import SwiftUI
 //}
 //
 
+@MainActor
 struct SenadorListView: View {
     @State private var selectedTab: Tab = .todosOsSenadores
     @StateObject var listViewModel: SenadorListViewModel = .init(

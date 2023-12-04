@@ -42,6 +42,7 @@ struct SenadorListDetailView: View {
             VStack {
                 Label(favStr ?? " - ", systemImage: favIcon ?? "homekit")
                     .background(.white)
+                    .foregroundColor(.black)
                     .padding(5)
                     .onAppear {
                         updateState()
