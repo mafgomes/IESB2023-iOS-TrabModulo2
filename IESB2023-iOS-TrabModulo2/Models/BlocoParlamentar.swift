@@ -19,13 +19,6 @@ struct BlocoParlamentar: Decodable {
         case NomeApelido
         case DataCriacao
     }
-    
-    init(nomeBloco: String) throws {
-        self.NomeBloco = nomeBloco
-        self.NomeApelido = nomeBloco
-        self.DataCriacao = DISPATCH_WALLTIME_NOW.formatted()
-    }
-    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.CodigoBloco = try container.decode(String.self, forKey: .CodigoBloco)

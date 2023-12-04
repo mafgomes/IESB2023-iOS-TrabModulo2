@@ -25,7 +25,6 @@
 		720663492B16BA9200F5CF6C /* SenadorListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720663482B16BA9200F5CF6C /* SenadorListItemView.swift */; };
 		7206634B2B16DE4100F5CF6C /* SenadorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */; };
 		72148D9F2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148D9E2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift */; };
-		72148DA12B168B92009F2F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DA02B168B92009F2F23 /* ContentView.swift */; };
 		72148DA32B168B94009F2F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72148DA22B168B94009F2F23 /* Assets.xcassets */; };
 		72148DA62B168B94009F2F23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72148DA52B168B94009F2F23 /* Preview Assets.xcassets */; };
 		72148DA82B168B94009F2F23 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DA72B168B94009F2F23 /* Persistence.swift */; };
@@ -35,7 +34,8 @@
 		72148DC12B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72148DC02B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift */; };
 		723CF5E02B1693AB00F872CD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 723CF5DF2B1693AB00F872CD /* README.md */; };
 		723CF5E22B1693C700F872CD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 723CF5E12B1693C600F872CD /* LICENSE */; };
-		72A2A62E2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2A62D2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift */; };
+		72640ABA2B1D41ED00408C5F /* ParOuImpar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640AB92B1D41ED00408C5F /* ParOuImpar.swift */; };
+		728381C12B1C243F00E141A6 /* SenadorListNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728381C02B1C243F00E141A6 /* SenadorListNavigationStack.swift */; };
 		72A2A6302B17149400C443F2 /* SenadorListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +76,6 @@
 		7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListViewModel.swift; sourceTree = "<group>"; };
 		72148D9B2B168B92009F2F23 /* IESB2023-iOS-TrabModulo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IESB2023-iOS-TrabModulo2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72148D9E2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IESB2023_iOS_TrabModulo2App.swift; sourceTree = "<group>"; };
-		72148DA02B168B92009F2F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72148DA22B168B94009F2F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72148DA52B168B94009F2F23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72148DA72B168B94009F2F23 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -88,7 +87,8 @@
 		72148DC02B168B94009F2F23 /* IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IESB2023_iOS_TrabModulo2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		723CF5DF2B1693AB00F872CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		723CF5E12B1693C600F872CD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		72A2A62D2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListViewNavigationSplitView.swift; sourceTree = "<group>"; };
+		72640AB92B1D41ED00408C5F /* ParOuImpar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParOuImpar.swift; sourceTree = "<group>"; };
+		728381C02B1C243F00E141A6 /* SenadorListNavigationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenadorListNavigationStack.swift; sourceTree = "<group>"; };
 		72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				720663422B16B98F00F5CF6C /* ImageManager.swift */,
+				72640AB92B1D41ED00408C5F /* ParOuImpar.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -155,12 +156,11 @@
 		720663452B16B9E200F5CF6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				72148DA02B168B92009F2F23 /* ContentView.swift */,
-				720663462B16BA8100F5CF6C /* SenadorListView.swift */,
-				720663482B16BA9200F5CF6C /* SenadorListItemView.swift */,
-				7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */,
-				72A2A62D2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift */,
 				72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */,
+				720663482B16BA9200F5CF6C /* SenadorListItemView.swift */,
+				728381C02B1C243F00E141A6 /* SenadorListNavigationStack.swift */,
+				720663462B16BA8100F5CF6C /* SenadorListView.swift */,
+				7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,8 +362,8 @@
 			files = (
 				720663372B16B97400F5CF6C /* DescrMandato.swift in Sources */,
 				7206634B2B16DE4100F5CF6C /* SenadorListViewModel.swift in Sources */,
+				728381C12B1C243F00E141A6 /* SenadorListNavigationStack.swift in Sources */,
 				72148DA82B168B94009F2F23 /* Persistence.swift in Sources */,
-				72148DA12B168B92009F2F23 /* ContentView.swift in Sources */,
 				720663432B16B98F00F5CF6C /* ImageManager.swift in Sources */,
 				720663342B16B97400F5CF6C /* BlocoParlamentar.swift in Sources */,
 				720663392B16B97400F5CF6C /* TipoMetadados.swift in Sources */,
@@ -371,8 +371,8 @@
 				7206633A2B16B97400F5CF6C /* TipoParlamentares.swift in Sources */,
 				720663322B16B97400F5CF6C /* RetornoDaApi.swift in Sources */,
 				720663472B16BA8100F5CF6C /* SenadorListView.swift in Sources */,
-				72A2A62E2B17135B00C443F2 /* SenadorListViewNavigationSplitView.swift in Sources */,
 				720663352B16B97400F5CF6C /* Senador.swift in Sources */,
+				72640ABA2B1D41ED00408C5F /* ParOuImpar.swift in Sources */,
 				72A2A6302B17149400C443F2 /* SenadorListDetailView.swift in Sources */,
 				7206633C2B16B97400F5CF6C /* Exercicios.swift in Sources */,
 				72148D9F2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift in Sources */,

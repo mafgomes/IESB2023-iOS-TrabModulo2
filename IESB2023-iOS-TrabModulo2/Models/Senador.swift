@@ -11,7 +11,7 @@ class Contador {
     static var val: Int = 0
 }
 
-class Senador: Decodable, Identifiable {
+struct Senador: Decodable, Identifiable {
     var oid: ObjectIdentifier
     var id: Int
 
@@ -23,21 +23,12 @@ class Senador: Decodable, Identifiable {
         case Mandato
     }
 
-    init(
-        nome: String,
-        legenda: String,
-        estado: String,
-        eMail: String,
-        imageURL: String
-    ) throws {
-        self.IdentificacaoParlamentar = try IdentSenador(nomeParlamentar: nome, nomeCompletoParlamentar: nome, urlFotoStr: imageURL, eMailParlamentar: eMail, siglaPartidoParlamentar: legenda, bloco: legenda)
-    }
-
-    required init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        // print("Decodificando Senador...\n")
         self.IdentificacaoParlamentar = try container.decode(IdentSenador.self, forKey: .IdentificacaoParlamentar)
         self.Mandato = try container.decode(DescrMandato.self, forKey: .Mandato)
-        
+
         self.oid = ObjectIdentifier(Contador())
         self.id = Contador.val
         Contador.val += 1

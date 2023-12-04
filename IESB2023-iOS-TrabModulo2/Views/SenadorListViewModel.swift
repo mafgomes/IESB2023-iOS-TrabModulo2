@@ -2,32 +2,29 @@
 //  SenadorListViewModel.swift
 //  IESB2023-iOS-TrabModulo2
 //
-//  Created by Marcelo A F Gomes on 28/11/23.
+//  Created by Marcelo A F Gomes on 15/11/23.
 //
 
 import Foundation
 
 @MainActor
 class SenadorListViewModel: ObservableObject {
-    private let service: SenadorServiceable
+    private let service: SenadorListServiceable
 
-    @Published var listItemModels: [Senador] = []
+    @Published var listItemModels: [SenadorListItemModel] = []
     @Published var searchText: String = ""
-    @Published var selectedItemModel: Senador?
+    @Published var selectedItemModel: SenadorListItemModel?
 
-    var filteredListItemModels: [Senador] {
+    var filteredListItemModels: [SenadorListItemModel] {
         searchText.isEmpty ?
         listItemModels :
         listItemModels.filter {
-            $0.IdentificacaoParlamentar.NomeParlamentar.uppercased().contains(searchText.uppercased()) ||
-            $0.IdentificacaoParlamentar.NomeCompletoParlamentar.uppercased().contains(searchText.uppercased()) ||
-            $0.IdentificacaoParlamentar.Bloco.NomeBloco.uppercased().contains(searchText.uppercased()) ||
-            $0.IdentificacaoParlamentar.Bloco.NomeApelido.uppercased().contains(searchText.uppercased()) ||
-            $0.IdentificacaoParlamentar.SiglaPartidoParlamentar.uppercased().contains(searchText.uppercased())
+            $0.nome.uppercased().contains(searchText.uppercased()) ||
+            $0.partido.uppercased().contains(searchText.uppercased())
         }
     }
 
-    init(service: SenadorServiceable) {
+    init(service: SenadorListServiceable) {
         self.service = service
     }
 
@@ -35,14 +32,16 @@ class SenadorListViewModel: ObservableObject {
         Task {
             do {
                 self.listItemModels = try await service
-                    .fetchSenadorList(page: 1)
+                    .fetchSenadorList()
                     .map {
-                        try Senador(
+                        SenadorListItemModel(
                             nome: $0.IdentificacaoParlamentar.NomeParlamentar,
-                            legenda: $0.IdentificacaoParlamentar.SiglaPartidoParlamentar,
-                            estado: $0.IdentificacaoParlamentar.UfParlamentar,
+                            nomeCompleto: $0.IdentificacaoParlamentar.NomeCompletoParlamentar,
+                            partido: "\($0.IdentificacaoParlamentar.SiglaPartidoParlamentar) / \($0.Mandato.UfParlamentar)",
+                            imageURL: $0.IdentificacaoParlamentar.UrlFotoParlamentar,
                             eMail: $0.IdentificacaoParlamentar.EmailParlamentar,
-                            imageURL: $0.IdentificacaoParlamentar.UrlFotoParlamentar?.formatted() ?? ""
+                            telefone: $0.IdentificacaoParlamentar.Telefones.Telefones.first!.NumeroTelefone,
+                            escritorio: $0.IdentificacaoParlamentar.UfParlamentar
                         )
                     }
             } catch {

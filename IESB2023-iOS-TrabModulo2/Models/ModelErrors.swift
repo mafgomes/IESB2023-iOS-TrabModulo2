@@ -10,5 +10,7 @@ import Foundation
 enum ParlamentarError: Error {
     case erroNaURL
     case erroNaDecodificacao
+    case naoConseguiRetornarListaDeSenadores(codErro: Int)
     case deuOutroPau
+    case erroDesconhecido
 }

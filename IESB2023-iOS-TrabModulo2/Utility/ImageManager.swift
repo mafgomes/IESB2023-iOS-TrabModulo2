@@ -13,18 +13,21 @@ final class ImageManager {
     private var cache: NSCache<NSString, UIImage> = .init()
 
     func loadImage(from url: URL?, completion: @escaping (UIImage?) -> Void) {
+//        print("\nCarregando '\(String(describing: url?.absoluteString))'\n")
+//        return
+//
         guard let nnUrl = url else {
             completion(nil)
             return
         }
-        let urlStr = nnUrl.absoluteString
+        let urlStr = nnUrl.absoluteString.replacingOccurrences(of: "http:", with: "https:")
 
         if let cachedImg = cache.object(forKey: urlStr as NSString) {
             completion(cachedImg)
             return
         }
 
-        guard let url = URL(string: urlStr.replacingOccurrences(of: "http:", with: "https:")) else {
+        guard let url = URL(string: urlStr) else {
             completion(nil)
             return
         }

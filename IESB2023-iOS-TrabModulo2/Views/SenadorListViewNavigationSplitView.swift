@@ -1,58 +1,87 @@
 //
-//  SenadorListViewNavigationSplitView.swift
+//  SenadorListView.swift
 //  IESB2023-iOS-TrabModulo2
 //
-//  Created by Marcelo A F Gomes on 29/11/23.
+//  Created by Marcelo A F Gomes on 15/11/23.
 //
 
 import SwiftUI
 
 struct SenadorListViewNavigationSplitView: View {
-    @ObservedObject var senadorViewModel: SenadorListViewModel
+    @ObservedObject var viewModel: SenadorListViewModel
 
     init(
-        senadorViewModel: SenadorListViewModel
+        viewModel: SenadorListViewModel
     ) {
-        self.senadorViewModel = senadorViewModel
+        self.viewModel = viewModel
     }
 
     var body: some View {
-        NavigationSplitView {
-            List(senadorViewModel.filteredListItemModels) { item in
-                Button {
-                    senadorViewModel.selectedItemModel = item
-                } label: {
-//                    SenadorListItemView(model: item)
-                    SenadorListItemView()
+        if #available(iOS 16.0, *) {
+            NavigationSplitView {
+
+                List(viewModel.filteredListItemModels) { item in
+                    Button {
+                        viewModel.selectedItemModel = item
+                    } label: {
+                        SenadorListItemView(model: item)
+                    }
                 }
+                .onAppear {
+                    viewModel.fetchData()
+                }
+                .navigationTitle("Senadores")
+                .searchable(text: $viewModel.searchText)
+
+            } detail: {
+
+                if let selectedItemModel = viewModel.selectedItemModel {
+                    SenadorListDetailView(itemModel: selectedItemModel)
+                } else {
+                    Text("Select Character")
+                }
+
             }
-            .onAppear {
-                senadorViewModel.fetchData()
-            }
-            .navigationTitle("Senadores")
-            .searchable(text: $senadorViewModel.searchText)
-        } detail: {
-            if let selectedItemModel = senadorViewModel.selectedItemModel {
-                SenadorListDetailView(item: selectedItemModel)
-            } else {
-                Text("Selecione o senador")
+        } else {
+            NavigationView {
+                SenadorListDetailView(
+                    itemModel: .init(
+                        title: "test",
+                        subtitle: "test",
+                        imageURL: nil
+                    )
+                )
+                SenadorListDetailView(
+                    itemModel: .init(
+                        title: "test",
+                        subtitle: "test",
+                        imageURL: nil
+                    )
+                )
+                SenadorListDetailView(
+                    itemModel: .init(
+                        title: "test",
+                        subtitle: "test",
+                        imageURL: nil
+                    )
+                )
             }
         }
     }
 }
 
-struct ListViewNavigationSplitView_Previews: PreviewProvider {
+struct SenadorListViewNavigationSplitView_Previews: PreviewProvider {
     static var previews: some View {
         SenadorListViewNavigationSplitView(
-            senadorViewModel: SenadorListViewModel(
+            viewModel: SenadorListViewModel(
                 service: SenadorServicePreview()
             )
         )
     }
 }
 
-fileprivate final class SenadorServicePreview: SenadorServiceable {
-    func fetchSenadorList(page: Int) async throws -> [Senador] {
+fileprivate final class SenadorServicePreview: SenadorListServiceable {
+    func fetchSenadorList() async throws -> [Senador] {
         let resultsString = """
         [
         {
@@ -101,7 +130,3 @@ fileprivate final class SenadorServicePreview: SenadorServiceable {
         }
     }
 }
-//
-//#Preview {
-//    SenadorListViewNavigationSplitView()
-//}
