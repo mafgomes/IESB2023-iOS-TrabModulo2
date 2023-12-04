@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SenadorListViewNavigationStack: View {
+struct SenadorListViewTodos: View {
     @ObservedObject var viewModel: SenadorListViewModel
 
     init(viewModel: SenadorListViewModel) {

@@ -24,6 +24,12 @@ class SenadorListViewModel: ObservableObject {
         }
     }
 
+    var favoritosListItemModels: [SenadorListItemModel] {
+        listItemModels.filter {
+            Favoritado.shared.todos.contains($0.cod)
+        }
+    }
+
     init(service: SenadorListServiceable) {
         self.service = service
     }
