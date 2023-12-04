@@ -38,6 +38,8 @@
 		72640ABF2B1DAA5700408C5F /* Favoritados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640ABE2B1DAA5700408C5F /* Favoritados.swift */; };
 		72640AC32B1DC6B300408C5F /* SenadorListViewFavoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72640AC22B1DC6B300408C5F /* SenadorListViewFavoritos.swift */; };
 		728381C12B1C243F00E141A6 /* SenadorListNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728381C02B1C243F00E141A6 /* SenadorListNavigationStack.swift */; };
+		729373022B1E546000C9B15E /* SenadorMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729373012B1E546000C9B15E /* SenadorMapView.swift */; };
+		729373052B1E552A00C9B15E /* SenadorMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729373042B1E552A00C9B15E /* SenadorMapViewModel.swift */; };
 		72A2A6302B17149400C443F2 /* SenadorListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		72640ABE2B1DAA5700408C5F /* Favoritados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favoritados.swift; sourceTree = "<group>"; };
 		72640AC22B1DC6B300408C5F /* SenadorListViewFavoritos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListViewFavoritos.swift; sourceTree = "<group>"; };
 		728381C02B1C243F00E141A6 /* SenadorListNavigationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenadorListNavigationStack.swift; sourceTree = "<group>"; };
+		729373012B1E546000C9B15E /* SenadorMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorMapView.swift; sourceTree = "<group>"; };
+		729373042B1E552A00C9B15E /* SenadorMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorMapViewModel.swift; sourceTree = "<group>"; };
 		72A2A62F2B17149400C443F2 /* SenadorListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenadorListDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,8 +168,8 @@
 				720663482B16BA9200F5CF6C /* SenadorListItemView.swift */,
 				728381C02B1C243F00E141A6 /* SenadorListNavigationStack.swift */,
 				720663462B16BA8100F5CF6C /* SenadorListView.swift */,
-				7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */,
 				72640AC22B1DC6B300408C5F /* SenadorListViewFavoritos.swift */,
+				729373012B1E546000C9B15E /* SenadorMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +201,7 @@
 			children = (
 				72148D9E2B168B92009F2F23 /* IESB2023_iOS_TrabModulo2App.swift */,
 				720663452B16B9E200F5CF6C /* Views */,
+				729373032B1E54D700C9B15E /* ViewModels */,
 				7206633E2B16B98300F5CF6C /* Services */,
 				72640ABD2B1DAA2500408C5F /* Persistent */,
 				720663252B16B97300F5CF6C /* Models */,
@@ -240,6 +245,15 @@
 				72640ABE2B1DAA5700408C5F /* Favoritados.swift */,
 			);
 			path = Persistent;
+			sourceTree = "<group>";
+		};
+		729373032B1E54D700C9B15E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7206634A2B16DE4100F5CF6C /* SenadorListViewModel.swift */,
+				729373042B1E552A00C9B15E /* SenadorMapViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,8 +392,10 @@
 				7206634B2B16DE4100F5CF6C /* SenadorListViewModel.swift in Sources */,
 				728381C12B1C243F00E141A6 /* SenadorListNavigationStack.swift in Sources */,
 				72148DA82B168B94009F2F23 /* Persistence.swift in Sources */,
+				729373052B1E552A00C9B15E /* SenadorMapViewModel.swift in Sources */,
 				720663432B16B98F00F5CF6C /* ImageManager.swift in Sources */,
 				720663342B16B97400F5CF6C /* BlocoParlamentar.swift in Sources */,
+				729373022B1E546000C9B15E /* SenadorMapView.swift in Sources */,
 				72640ABF2B1DAA5700408C5F /* Favoritados.swift in Sources */,
 				720663392B16B97400F5CF6C /* TipoMetadados.swift in Sources */,
 				720663492B16BA9200F5CF6C /* SenadorListItemView.swift in Sources */,

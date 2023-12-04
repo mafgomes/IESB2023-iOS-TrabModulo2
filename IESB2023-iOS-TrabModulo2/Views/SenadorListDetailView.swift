@@ -10,6 +10,7 @@ import SwiftUI
 struct SenadorListDetailView: View {
     private let im: SenadorListItemModel
 
+    @StateObject var mapViewModel = SenadorMapViewModel()
     @State private var st = false
     @State private var favStr: String?
     @State private var favIcon: String?
@@ -104,7 +105,8 @@ struct SenadorListDetailView: View {
             }
         }
         .sheet(isPresented: $isSheetPresented) {
-            Text(" Mapa do Escritório ")
+            SenadorMapView(viewModel: mapViewModel)
+                .navigationBarTitle("Mapa")
         }
     }
 }
